@@ -26,19 +26,23 @@
         <div class="min-h-screen bg-gray-100">
             @livewire('navigation-menu')
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
+           <div class="container-fluid">
+               <div class="row">
+                    <div class="col-md-3">
+                        <!-- Sibebar-->
+                        <h1>setores</h1>
                     </div>
-                </header>
-            @endif
+                    <div class="col-md-9">
+                    <!-- Page Content -->
+                    <main>
+                        {{ $slot }}
+                    </main>
+                    </div>
+               </div>
+               
+           </div>
             
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+            
         </div>
 
         @stack('modals')
