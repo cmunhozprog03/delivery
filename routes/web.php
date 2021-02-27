@@ -23,4 +23,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 // Routes Setores
-Route::get('/setores', Setor::class)->middleware('auth');
+Route::get('/setores', Setor::class)->name('setores.all')->middleware('auth');
