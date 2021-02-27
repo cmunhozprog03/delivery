@@ -13,7 +13,8 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="{{asset('css/w3.css')}}">
         @livewireStyles
 
         <!-- Scripts -->
@@ -25,19 +26,23 @@
         <div class="min-h-screen bg-gray-100">
             @livewire('navigation-menu')
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
+           <div class="container-fluid">
+               <div class="row">
+                    <div class="col-md-3">
+                        <!-- Sibebar-->
+                        <h1>setores</h1>
                     </div>
-                </header>
-            @endif
-
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+                    <div class="col-md-9">
+                    <!-- Page Content -->
+                    <main>
+                        {{ $slot }}
+                    </main>
+                    </div>
+               </div>
+               
+           </div>
+            
+            
         </div>
 
         @stack('modals')
