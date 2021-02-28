@@ -23,7 +23,7 @@ class CreateCategoriasTable extends Migration
             $table->string('slug')->unique();
             $table->boolean('active');
             $table->integer('position');
-            $table->string('image');
+            $table->string('image')->nullable();
 
             $table->timestamps();
 
